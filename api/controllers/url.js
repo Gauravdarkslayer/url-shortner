@@ -25,4 +25,20 @@ module.exports.createShortUrl = async(req,res)=>{
 		console.error(err);
 		return res.send({"status":false,"message":global.internal_server_error,"statusCode":httpStatus.INTERNAL_SERVER_ERROR});
 	}
-}
+};
+
+
+
+module.exports.getLongUrl = async(req,res)=>{
+	try{
+		let longUrl = await Url.findOne({short_url:req.params.id});
+		if(longUrl){
+			res.redirect(longUrl.long_url);
+		} else {
+			return res.send({"status":false,"message":global.not_found,"statusCode":httpStatus.NOT_FOUND});
+		}
+	} catch (err){
+		console.error(err);
+		return res.send({"status":false,"message":global.internal_server_error,"statusCode":httpStatus.INTERNAL_SERVER_ERROR});
+	}
+};

@@ -5,4 +5,6 @@ const urlController = require('../controllers/url');
 
 
 router.post('/api/v1/createShortUrl',urlController.createShortUrl);
+router.get('/api/v1/getLongUrl',urlController.getLongUrl);
+
 module.exports = router;
