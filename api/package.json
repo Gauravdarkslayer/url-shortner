@@ -1,0 +1,14 @@
+{
+  "name": "url-shortener-api",
+  "version": "1.0.0",
+  "description": "This package will contain apis for url shortener project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "url-shortener"
+  ],
+  "author": "Gaurav Bhojwani",
+  "license": "ISC"
+}
