@@ -1,0 +1,23 @@
+{
+    "dev":{
+        "host":"localhost",
+        "port":"27017",
+        "user":"root",
+        "password":"gaurav@123",
+        "database":"url-shortener"
+    },
+    "test":{
+        "host":"localhost",
+        "port":"27017",
+        "user":"root",
+        "password":"",
+        "database":"url-shortener"
+    },
+    "prod":{
+        "host":"localhost",
+        "port":"27017",
+        "user":"root",
+        "password":"",
+        "database":"url-shortener"
+    }
+}

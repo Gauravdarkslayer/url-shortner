@@ -1,0 +1,5 @@
+{
+    "internal_server_error": "Internal Server Error",
+    "url_created" : "Url created successfully",
+    "url_exist": "Url already exist"
+}
