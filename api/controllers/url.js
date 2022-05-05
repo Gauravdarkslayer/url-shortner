@@ -18,8 +18,8 @@ module.exports.createShortUrl = async (req, res) => {
 				randomString = helper.createRandomString();
 				isUniqueUrl = await Url.findOne({ short_url: randomString });
 			}
-			let newUrl = await new Url({ long_url: req.body.url, short_url: randomString });
-			return res.send({ "status": true, "message": global.url_created, "statusCode": httpStatus.OK, "data": newUrl });
+			let newUrl = await new Url({ long_url: req.body.url, short_url: randomString }).save();
+			return res.send({ "status": true, "message": global.url_created, "statusCode": httpStatus.OK, "data": { short_url: randomString } });
 		}
 	} catch (err) {
 		console.error(err);
