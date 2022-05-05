@@ -1,2 +1,2 @@
-import ServiceRoutes from "./service-routes";
+import * as ServiceRoutes from "./service-routes";
 export default ServiceRoutes;
